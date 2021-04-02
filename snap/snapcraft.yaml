@@ -135,7 +135,7 @@ parts:
   ion:
     source: https://github.com/ckti-ioncore-current/ion
     source-type: git
-    source-tag: upstream-update
+    source-tag: upstream-upgrade
     plugin: nil
     override-build: |
       echo "+++++++++++++++++++++++++++++++++++++++++++++++"
