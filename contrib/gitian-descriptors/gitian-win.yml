@@ -3,7 +3,7 @@ name: "ioncore-win-5.0"
 enable_cache: true
 distro: "ubuntu"
 suites:
-- "bionic"
+- "focal"
 architectures:
 - "amd64"
 packages:
