@@ -27,7 +27,6 @@ BuildRequires: gcc, git, rpm-build, rpm-devel, autoconf, automake, libtool, gcc-
 
 %if 0%{?suse_version}
 BuildRequires: libstdc++-devel, glibc-devel, binutils
-%global __strip /usr/bin/strip
 %else
 %if 0%{?mageia}
 BuildRequires: libstdc++-static-devel, glibc-static-devel
@@ -137,11 +136,11 @@ cp $RPM_SOURCE_DIR/0001-xcb-proto-for-new-python.patch depends/patches/xcb_proto
 %endif
 cp $RPM_SOURCE_DIR/force_bootstrap.patch depends/patches/qt
 HOST=${BUILD} make -j5 -C depends
-#cp -pr ~/depends.5.0.00/* depends/
+#cp -pr ~/depends/* depends/
 ./autogen.sh
 CONFIG_SITE=`pwd`/depends/${BUILD}/share/config.site ./configure --prefix=/usr --enable-glibc-back-compat --enable-reduce-exports --disable-bench --disable-gui-tests --disable-ccache --disable-maintainer-mode --disable-dependency-tracking --host=${BUILD}
 HOST=${BUILD} make -j5 install DESTDIR=$RPM_BUILD_ROOT
-/bin/strip $RPM_BUILD_ROOT/usr/bin/*
+/usr/bin/strip $RPM_BUILD_ROOT/usr/bin/*
 mkdir -p $RPM_BUILD_ROOT/usr/share/doc/ion
 mkdir -p $RPM_BUILD_ROOT/usr/share/pixmaps
 mkdir -p $RPM_BUILD_ROOT/usr/share/applications
@@ -307,7 +306,7 @@ echo "# Ioncoin Package Removed"
 echo "##"
 
 %changelog
-* Tue Apr 20 2021 ckti.ion <ckti@i2pmail.org> - 5.0.99.0-e15e875
+* Wed Apr 21 2021 ckti.ion <ckti@i2pmail.org> - 5.0.99.0-e15e875
 - update to 5.0.00
 
 * Sun Apr 26 2020 ckti <ckti@i2pmail.org> - 5.0.99.0-e17c0dfd2
