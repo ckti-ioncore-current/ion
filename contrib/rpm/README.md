@@ -9,4 +9,4 @@ If a binary for your system is not available or you wish to compile on your own 
 5) copy all the patches in the /contrib/rpm/depends/patches to your rpm SOURCES directory `cp /contrib/rpm/depends/patches/* <location of rpm build files>/SOURCES`
 6) copy the ion.spec file to your rpm SPECS directory `cp /contrib/rpm/ion.spec <location of rpm build files>/SPECS`
 7) build the binaries using rpmbuild `rpm -ba <location of rpm build files>/SPECS/ion.spec`
-8) you will now have binaries in <location of rpm build files>/RPMS/<architecture of build>
+8) you will now have binaries in `<location of rpm build files>/RPMS/<architecture of build>`
