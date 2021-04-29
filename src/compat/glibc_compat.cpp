@@ -63,7 +63,7 @@ extern "C" float log2f_old(float x);
 #ifdef __i386__
 __asm(".symver log2f_old,log2f@GLIBC_2.1");
 #elif defined(__amd64__)
-__asm(".symver log2f_old,log2f@GLIBC_2.2.5");
+__asm(".symver log2f_old,log2f@GLIBC_2.27");
 #elif defined(__arm__)
 __asm(".symver log2f_old,log2f@GLIBC_2.4");
 #elif defined(__aarch64__)
