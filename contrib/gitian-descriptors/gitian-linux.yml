@@ -45,7 +45,7 @@ packages:
 - "linux-libc-dev"
 - "doxygen"
 remotes:
-- "url": "https://github.com/ioncoincore/ion.git"
+- "url": "https://github.com/ckti-ioncore-current/ion.git"
   "dir": "ion"
 files: []
 script: |
