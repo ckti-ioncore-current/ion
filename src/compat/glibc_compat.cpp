@@ -61,7 +61,7 @@ extern "C" int64_t __wrap___divmoddi4(int64_t u, int64_t v, int64_t* rp)
 
 extern "C" float log2f_old(float x);
 #ifdef __i386__
-__asm(".symver log2f_old,log2f@GLIBC_2.3");
+__asm(".symver log2f_old,log2f@GLIBC_2.3.0");
 #elif defined(__amd64__)
 __asm(".symver log2f_old,log2f@GLIBC_2.27");
 #elif defined(__arm__)
