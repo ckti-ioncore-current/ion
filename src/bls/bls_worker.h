@@ -1,9 +1,9 @@
-// Copyright (c) 2018-2020 The Dash Core developers
+// Copyright (c) 2018-2021 The Dash Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ION_CRYPTO_BLS_WORKER_H
-#define ION_CRYPTO_BLS_WORKER_H
+#ifndef BYTZ_CRYPTO_BLS_WORKER_H
+#define BYTZ_CRYPTO_BLS_WORKER_H
 
 #include <bls/bls.h>
 
@@ -56,7 +56,7 @@ public:
     void Start();
     void Stop();
 
-    bool GenerateContributions(int threshold, const BLSIdVector& ids, BLSVerificationVectorPtr& vvecRet, BLSSecretKeyVector& skShares);
+    bool GenerateContributions(int threshold, const BLSIdVector& ids, BLSVerificationVectorPtr& vvecRet, BLSSecretKeyVector& skSharesRet);
 
     // The following functions are all used to aggregate verification (public key) vectors
     // Inputs are in the following form:
@@ -82,7 +82,7 @@ public:
     // Inputs are in the following form:
     //   [a, b, c, d],
     // The result is simply a+b+c+d
-    // Aggregation is parallelized by splitting up the input vector into multiple batches and then aggregating the individual batch results
+    // Aggregation is paralellized by splitting up the input vector into multiple batches and then aggregating the individual batch results
     void AsyncAggregateSecretKeys(const BLSSecretKeyVector& secKeys,
                                   size_t start, size_t count, bool parallel,
                                   std::function<void(const CBLSSecretKey&)> doneCallback);
@@ -202,4 +202,4 @@ private:
     }
 };
 
-#endif //ION_CRYPTO_BLS_WORKER_H
+#endif //BYTZ_CRYPTO_BLS_WORKER_H

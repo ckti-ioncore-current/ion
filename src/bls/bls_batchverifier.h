@@ -1,9 +1,9 @@
-// Copyright (c) 2018-2019 The Dash Core developers
+// Copyright (c) 2018-2020 The Dash Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ION_CRYPTO_BLS_BATCHVERIFIER_H
-#define ION_CRYPTO_BLS_BATCHVERIFIER_H
+#ifndef BYTZ_CRYPTO_BLS_BATCHVERIFIER_H
+#define BYTZ_CRYPTO_BLS_BATCHVERIFIER_H
 
 #include <bls/bls.h>
 
@@ -237,4 +237,4 @@ private:
     }
 };
 
-#endif //ION_CRYPTO_BLS_BATCHVERIFIER_H
+#endif //BYTZ_CRYPTO_BLS_BATCHVERIFIER_H
