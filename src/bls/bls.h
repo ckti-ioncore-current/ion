@@ -1,9 +1,10 @@
 // Copyright (c) 2018-2021 The Dash Core developers
+// Copyright (c) 2018-2021 The Ion Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BYTZ_CRYPTO_BLS_H
-#define BYTZ_CRYPTO_BLS_H
+#ifndef ION_CRYPTO_BLS_H
+#define ION_CRYPTO_BLS_H
 
 #include <hash.h>
 #include <serialize.h>
@@ -448,4 +449,4 @@ typedef std::shared_ptr<BLSSignatureVector> BLSSignatureVectorPtr;
 
 bool BLSInit();
 
-#endif // BYTZ_CRYPTO_BLS_H
+#endif // ION_CRYPTO_BLS_H
