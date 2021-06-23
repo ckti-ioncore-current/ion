@@ -40,7 +40,6 @@ packages:
 - "bsdmainutils"
 - "ca-certificates"
 - "python3"
-- "cmake"
 - "libxkbcommon0"
 - "ccache"
 remotes:

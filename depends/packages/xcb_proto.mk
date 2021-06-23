@@ -11,8 +11,10 @@ define $(package)_set_vars
 endef
 
 define $(package)_preprocess_cmds
-patch -p1 < $($(package)_patch_dir)/0001-xcb-proto-for-new-python.patch && \
-  cp -f $(BASEDIR)/config.guess $(BASEDIR)/config.sub .
+if  python3 -c 'import sys; assert sys.version_info >= (3,9)' > /dev/null; then \
+ patch -p1 < $($(package)_patch_dir)/0001-xcb-proto-for-new-python.patch &&\
+fi \
+cp -f $(BASEDIR)/config.guess $(BASEDIR)/config.sub .
 endef
 
 define $(package)_config_cmds
